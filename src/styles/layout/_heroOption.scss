@@ -1,0 +1,193 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+#mainCard {
+    @include spacing(margin, 2rem, tb);
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.4rem;
+    border: 1.5px solid #D3D3D3;
+
+    #toggle {
+        background-color: $cyan-10;
+        display: flex;
+        border-radius: 0.5rem;
+
+        #opt1, #opt2 {
+            width: 50%;
+            text-align: center;
+            padding: 1rem;
+            color: $dark-30;
+            font-size: 1.2rem;
+        }
+    }
+
+    #converter {
+        @include spacing(padding, 1.4rem, tb);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #from, #to {
+            @include bottom-line;
+            width: 44%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 1.3rem;
+
+            .country {
+                @include spacing(padding, 0.4rem, tb);
+                color: $dark-30;
+                font-size: 3rem;
+                font-weight: 500;
+            }
+        }
+
+        #to {
+            align-items: flex-end;
+        }
+
+        #from span:first-of-type, #to span:first-of-type {
+            color: $dark-10;
+            font-size: 1.2rem;
+        }
+
+        #from span:last-of-type, #to span:last-of-type {
+            color: $dark-30;
+            font-size: 1.2rem;
+        }
+
+        #convIcon {
+            @include square(3rem);
+        }
+    }
+
+    #secondLayer {
+        display: flex;
+        height: 5rem;
+        justify-content: space-between;
+
+        #date, #toggleReturn {
+            @include bottom-line;
+            width: 48%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            span:first-of-type {
+                @include mini-grey-txt;
+            }
+
+            span:last-of-type {
+                @include med-dark-txt;
+            }
+        }
+
+        #toggleReturn {
+            align-items: flex-end;
+
+            span:first-of-type {
+                @include mini-grey-txt;
+            }
+
+            span:last-of-type {
+                color: $cyan-20;
+                font-size: 1.6rem;
+                font-weight: 800;
+            }
+        }
+    }
+
+    #thirdLayer {
+        @include bottom-line;
+        margin-top: 1.8rem;
+
+        #deskTitle {
+            display: inline-block;
+            @include mini-grey-txt;
+        }
+
+        #infoText {
+            @include med-dark-txt;
+
+            #bull {
+                @include spacing(padding, 1rem, lr);
+                color: $dark-10;
+            }
+        }
+    }
+
+    #fourthLayer {
+        @include spacing(padding, 1.6rem, tb);
+
+        #headings-4 {
+            display: flex;
+            justify-content: space-between;
+
+            span:first-of-type {
+                @include mini-grey-txt(0);
+            }
+
+            #head2 {
+                all: unset;
+                display: flex;
+                align-items: center;
+
+                #monIc {
+                    @include square(1.5rem);
+                    margin-right: 0.5rem;
+                }
+
+                span {
+                    all: unset;
+                    color: #27AE60;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    #scrollParent {
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        padding-top: 1rem;
+        display: flex;
+        overflow-x: auto;
+
+        .scrollElem {
+            @include spacing(margin, 0.3rem, lr);
+            border: 2px solid $dark-5;
+            border-radius: 0.7rem;
+            padding: 1rem;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+
+            .optHead {
+                @include med-dark-txt(0.3rem, 1.3rem);
+            }
+
+            .optDesk {
+                @include mini-grey-txt(0, 1.1rem);
+            }
+        }
+    }
+
+    #triggerSearch {
+        all: unset;
+        @include flex-center;
+        @include spacing(padding, 1.7rem, tb);
+        width: 100%;
+        background-color: $cyan-20;
+        border-radius: 1rem;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+}
+
+
+

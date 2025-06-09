@@ -1,0 +1,30 @@
+@use "../abstracts/mixins" as *;
+
+#options {
+    display: flex;
+    justify-content: center;
+    margin-top: 6.5rem;
+
+    ul {
+        @include spacing(padding, 2rem, tb);
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        li {
+            @include spacing(margin, 2.5rem, lr);
+            @include flex-center(column);
+            width: 2.6rem;
+            position: relative;
+            
+            span {
+                position: absolute;
+                top: 3rem;
+                text-align: center;
+                width: 6rem;
+                color: #000000;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

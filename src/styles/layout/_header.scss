@@ -1,0 +1,38 @@
+@use "../abstracts/mixins" as *;
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    z-index: 100;
+    padding: 1.3rem 0 1.3rem 0;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+
+    #left {
+        display: flex;
+        align-items: center
+    }
+
+    #menu {
+        @include flex-center;
+        font-size: 2.3rem;
+        margin: 0 1.8rem 0 1.8rem;
+    }
+
+    #profile {
+        @include square(3.6rem);
+        @include flex-center;
+        border-radius: 50%;
+        border: 3px solid #002970;
+        margin-right: 2rem;
+
+        img {
+            border-radius: 50%;
+        }
+
+    }
+
+}

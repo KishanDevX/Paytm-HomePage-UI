@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+
+@mixin flex-center($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin spacing($property, $value, $direction) {
+  @if $direction == 'tb' {
+    #{$property}: $value 0 $value 0;
+  } @else if $direction == 'lr' {
+    #{$property}: 0 $value 0 $value;
+  } 
+}
+
+@mixin bottom-line {
+    border-bottom: 2px solid $dark-5;
+}
+
+@mixin mini-grey-txt($pad-b: 0.8rem, $size: 1.2rem) {
+    color: $dark-10;
+    font-size: $size;
+    padding-bottom: $pad-b;
+}
+
+@mixin med-dark-txt($pad-b: 0.7rem, $size: 1.5rem) {
+    color: $dark-30;
+    font-size: $size;
+    font-weight: 500;
+    padding-bottom: $pad-b;
+}

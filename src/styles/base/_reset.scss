@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+    font-family: 'Roboto';
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #e8f8fd, #ffffff);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    width: 90%;
+}
+
