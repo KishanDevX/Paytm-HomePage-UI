@@ -1,0 +1,153 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+#offerBanner {
+    @include spacing(margin, 3rem, tb);
+}
+
+#services {
+    box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h4 {
+        @include spacing(padding, 1rem, tb);
+        margin-top: 1rem;
+        width: 90%;
+        font-size: 1.8rem;
+    }
+
+    #serviceGrid {
+        @include spacing(padding, 1rem, tb);
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+
+        .serviceType {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #serveIcon {
+                @include square(4.8rem);
+                @include flex-center(column);
+            }
+
+            span {
+                display: inline-block;
+                text-align: center;
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: $dark-30;
+            }
+        }
+    }
+
+    #morePart {
+        width: 97%;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+#promoCard {
+    @include spacing(margin, 2rem, tb);
+    box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2.3rem;
+    padding: 3rem;
+
+    #promoLogo {
+        // background-coloxr: red;
+        // width: 16rem;
+        height: auto;
+        margin-bottom: 1.6rem;
+    }
+
+    #promoTitle {
+        // background-color: red;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #promoDesc {
+        // background-color: red;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #promoBtns {
+        display: flex;
+        justify-content: space-between;
+        width: 92%;
+        // background-color: yellow;
+
+        #playStore, #appStore {
+            // background-color: red;
+            width: 48.5%;
+            height: auto;
+        }
+
+        #promBtn {
+            all: unset;
+            @include spacing(padding, 0.8rem, tb);
+            padding-left: 2rem;
+            padding-right: 2rem;
+            color: white;
+            border-radius: 20rem;
+            font-size: 1.3rem;
+            background-color: $cyan-40;
+
+            i {
+                margin-left: 0.3rem;
+            }
+        }
+    }
+
+    #promoImg {
+        margin-top: 3.3rem;
+        padding: 0.5rem;
+    }
+}
+
+#miniPromo {
+    background-color: $cyan-50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    #left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #miniLogo {
+            @include square(3.4rem);
+        }
+
+        #miniTxt {
+            margin-left: 1rem;
+            display: flex;
+            font-size: 1.3rem;
+            flex-direction: column;
+        }
+    }
+
+    #miniBtn {
+        border: 1px solid $dark-5;
+        border-radius: 10rem;
+        padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+    }
+
+}
+
+#thirdBtnPart #imgBtn  {
+    margin-top: 1.2rem;
+    width: 80%;
+}

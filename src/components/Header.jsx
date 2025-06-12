@@ -13,7 +13,7 @@ const Header = () => {
       </div>
       <div id="profile">
         <img src="src/assets/icons/profileIcon.svg" alt="profile" />
-      </div>
+      </div> 
     </header>
   )
 }
