@@ -20,7 +20,7 @@ const Footer = () => {
             <div id="socGrid">
                 {socList.map((icon, idx) => {
                     return (
-                        <i class={icon} key={idx}></i>
+                        <i className={icon} key={idx}></i>
                     )
                 })}
             </div>

@@ -2,12 +2,6 @@ import React from 'react'
 
 const Services = ({title, serItem, extBanner}) => {
 
-//   const serItem = [
-//   { name: 'Mobile Recharge', icon: 'src/assets/icons/MoRechIc.avif' },
-//   { name: 'FASTag Recharge', icon: 'src/assets/icons/FaRechIc.avif' },
-//   { name: 'DTH Recharge', icon: 'src/assets/icons/DtRechIc.png' },
-// ]
-
   return (
     <section id='services'>
       <h4>{title}</h4>
@@ -29,7 +23,7 @@ const Services = ({title, serItem, extBanner}) => {
           <span>View All Products</span>
         </div>
       </div>
-      <a href='' id="morePart">
+      <a id="morePart">
         <img src={extBanner} />
       </a>
     </section>

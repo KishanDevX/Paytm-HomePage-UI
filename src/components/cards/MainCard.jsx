@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const MainCard = () => {
+
+  const availOptions = [
+    {head: 'Armed Forces', desk: 'Up to ₹600 off'},
+    {head: 'Student', desk: 'Extra Baggage'},
+    {head: 'Senior Citizen', desk: 'Up to ₹600 off'}
+  ]
+
   return (
         <section id='mainCard'>
           <div id="toggle">
@@ -51,18 +58,14 @@ const MainCard = () => {
               </div>
             </div>
             <div id="scrollParent">
-              <div className="scrollElem">
-                <span className='optHead'>Armed Forces</span>
-                <span className='optDesk'>Up to ₹600 off</span>
-              </div>
-              <div className="scrollElem">
-                <span className='optHead'>Student</span>
-                <span className='optDesk'>Extra Baggage</span>
-              </div>
-              <div className="scrollElem">
-                <span className='optHead'>Senior Citizen</span>
-                <span className='optDesk'>Up to ₹600 off</span>
-              </div>
+              {availOptions.map((elem, idx) => {
+                return (
+                  <div className="scrollElem" key={idx}>
+                    <span className='optHead'>{elem.head}</span>
+                    <span className='optDesk'>{elem.desk}</span>
+                  </div>
+                )
+              })}
             </div>
           </div>
           <button id='triggerSearch'>Search Flights</button>
